@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>PosterGen: Aesthetic-Aware Paper-to-Poster Generation via Multi-Agent LLMs</title>
+    <title>PosterGen: Aesthetic-Aware Multi-Modal Paper-to-Poster Generation via Multi-Agent LLMs</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link href="./css/vendors/aos.css" rel="stylesheet">
     <link href="./style.css" rel="stylesheet">
@@ -176,9 +176,9 @@
                                     </h1>
                                 </div>
                                 <!-- Second line: Subtitle -->
-                                <h2 class="text-3xl md:text-4xl font-extrabold leading-tighter tracking-tighter whitespace-nowrap"
+                                <h2 class="text-3xl md:text-4xl font-extrabold leading-tighter tracking-tighter text-center"
                                     style="color: #333; margin-bottom: 2.5rem;">
-                                    <em>Aesthetic-Aware</em> Paper-to-Poster Generation via Multi-Agent LLMs
+                                    <em>Aesthetic-Aware</em> Multi-Modal Paper-to-Poster Generation<br>via Multi-Agent LLMs
                                 </h2>
                             </div>
                             <div class="max-w-4xl mx-auto">
@@ -206,6 +206,9 @@
                                         University&nbsp;&nbsp;&nbsp;&nbsp;<sup>3</sup>University of British Columbia<br>
                                         <sup>4</sup>Zhejiang University&nbsp;&nbsp;&nbsp;&nbsp;<sup>5</sup>University of
                                         California, Los Angeles&nbsp;&nbsp;&nbsp;&nbsp;<sup>★</sup>Equal Contribution
+                                    </p>
+                                    <p class="text-2xl font-semibold text-center mt-6 mb-2" style="color: #333;">
+                                        Findings of CVPR 2026
                                     </p>
                                 </div>
                                 <div class="flex flex-wrap justify-center gap-4 md:gap-6" data-aos="zoom-y-out"
@@ -346,7 +349,7 @@
                         <!-- Section header -->
                         <div class="max-w-4xl mx-auto pb-12 md:pb-16">
                             <h1 class="h2 mb-4 text-center">Abstract</h1>
-                            <p class="text-xl text-gray-600">Multi-agent systems built on large language models (LLMs) and multimodal large language models (MLLMs) have recently shown strong capabilities on complex compositional tasks. We apply this paradigm to paper-to-poster generation, a practical but time-consuming step in research communication. Most of existing methods ignore core design and aesthetic principles, and often produce posters that still require substantial manual refinement. To address these limitations, we propose <em>PosterGen</em>, a multi-agent framework that embeds fundamental design principles into a specialized agent workflow that mirrors professional designers. Our system incorporates collaborative agents to distill a paper's narrative (CuratorAgent), map content to a balanced spatial layout (LayoutAgent), apply a cohesive visual system of color and typography (StylistAgents), and render the final poster in PPTX format (Renderer). This design-centric approach produces posters that are both semantically grounded and visually compelling. To systematically evaluate visual quality, we introduce a comprehensive VLM-based rubric measuring information fidelity and aesthetic design, which we validate against human preferences in a user study. Experimental results show that PosterGen achieves both content fidelity and design aesthetics comparable to human-designed posters while significantly and consistently outperforming state-of-the-art methods.
+                            <p class="text-xl text-gray-600">Multi-agent systems built on large language models (LLMs) and multimodal large language models (MLLMs) have recently shown strong capabilities on complex compositional tasks. We apply this paradigm to paper-to-poster generation, a practical but time-consuming step in research communication. Most of the existing methods ignore core design and aesthetic principles, and often produce posters that still require substantial manual refinement. To address these limitations, we propose <em>PosterGen</em>, a multi-agent framework that embeds fundamental design principles into a specialized agent workflow that mirrors professional designers. Our system incorporates collaborative agents to distill a paper's narrative (CuratorAgent), map content to a balanced spatial layout (LayoutAgent), apply a cohesive visual system of color and typography (StylistAgents), and render the final poster in PPTX format (Renderer). This design-centric approach produces posters that are both semantically grounded and visually compelling. To systematically evaluate visual quality, we introduce a comprehensive VLM-based rubric measuring information fidelity and aesthetic design, which we validate against human preferences in a user study. Experimental results show that PosterGen achieves both content fidelity and design aesthetics comparable to human-designed posters while significantly and consistently outperforming state-of-the-art methods.
                             </p>
                         </div>
 
@@ -1104,7 +1107,7 @@
                             <div class="bg-gray-50 rounded-lg border border-gray-200 p-6">
                                 <pre
                                     class="text-sm text-gray-800 whitespace-pre-wrap overflow-x-auto font-mono leading-relaxed"><code>@article{zhang2025postergen,
-  title={Postergen: Aesthetic-aware paper-to-poster generation via multi-agent llms},
+  title={Postergen: Aesthetic-aware multi-modal paper-to-poster generation via multi-agent llms},
   author={Zhang, Zhilin and Zhang, Xiang and Wei, Jiaqi and Xu, Yiwei and You, Chenyu},
   journal={arXiv preprint arXiv:2508.17188},
   year={2025}
