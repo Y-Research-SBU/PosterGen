@@ -293,7 +293,7 @@ class LayoutAgent:
             layout_elements.append(title_element)
         
         # add logo elements
-        logo_elements = self._create_logo_elements(state, poster_width)
+        logo_elements = self._create_logo_elements(state, poster_width, title_region_height)
         layout_elements.extend(logo_elements)
         
         # process each column
@@ -372,7 +372,7 @@ class LayoutAgent:
             "priority": 1.0
         }
     
-    def _create_logo_elements(self, state: PosterState, poster_width: float) -> List[Dict]:
+    def _create_logo_elements(self, state: PosterState, poster_width: float, title_region_height: float) -> List[Dict]:
         """create logo elements with exact positioning"""
         elements = []
 
@@ -387,9 +387,12 @@ class LayoutAgent:
             with Image.open(state["aff_logo_path"]) as img:
                 aff_logo_aspect_ratio = img.size[0] / img.size[1]
 
-        # calculate logo heights based on fit in 1/3 of poster width
+        # calculate logo heights based on fit in 1/3 of poster width, then
+        # cap by the title region so logos cannot overlap body columns.
         column_width = (poster_width - 2 * self.poster_margin - 2 * self.column_spacing) / 3
         logo_height = (column_width - 1) / (conf_logo_aspect_ratio + aff_logo_aspect_ratio)
+        max_logo_height = max(0.1, title_region_height - self.column_spacing)
+        logo_height = min(logo_height, max_logo_height)
         # widths based on aspect ratios
         conf_logo_width = logo_height * conf_logo_aspect_ratio
         aff_logo_width = logo_height * aff_logo_aspect_ratio
