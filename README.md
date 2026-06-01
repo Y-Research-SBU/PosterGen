@@ -301,11 +301,12 @@ Our system generates professional academic posters with high visual quality. Her
 
 ## Citation
 ```
-@article{zhang2025postergen,
-    title={PosterGen: Aesthetic-Aware Paper-to-Poster Generation via Multi-Agent LLMs},
-    author={Zhilin Zhang and Xiang Zhang and Jiaqi Wei and Yiwei Xu and Chenyu You},
-    journal={arXiv:2508.17188},
-    year={2025}
+@inproceedings{zhang2026postergen,
+  title={PosterGen: Aesthetic-Aware Multi-Modal Paper-to-Poster Generation Via Multi-Agent LLMs},
+  author={Zhang, Zhilin and Zhang, Xiang and Wei, Jiaqi and Xu, Yiwei and You, Chenyu},
+  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+  pages={9813--9823},
+  year={2026}
 }
 ```
 
